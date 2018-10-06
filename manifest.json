@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Global Add-on",
+  "version": "0.0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://public.globalpoker.com/poker-client/poker/10/external-table"
+      ],
+      "js": [
+        "content.js"
+        ]
+    }
+  ]
+}
