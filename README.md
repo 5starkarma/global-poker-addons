@@ -5,7 +5,7 @@ Google Chrome extension content script for buying into tables quickly, automatin
 
 Future features..
 
--Table and card mods
+-Table and card mods                                                                                                                  
 -Pre-select fold buttons
 -Mouse over table focus
   -highlight text under current table option
