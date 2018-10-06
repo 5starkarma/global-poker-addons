@@ -1,4 +1,4 @@
-console.log("Table open, now tiling tables");
+console.log("Table open, now loading hotkeys...");
 
 //Hotkeys for betting, raising, folding, and selecting bet-input box
 //.future-actions are preselect options. 
@@ -27,7 +27,7 @@ document.onkeydown = function(e) {
     }
 };
 
-console.log("Hotkeys loaded. Now loading quick-seat tool.");
+console.log("Hotkeys loaded. Now loading quick-seat tool...");
 
 //create delay function, guess setTimeout by itself would work as well
 var delay = ( function() {
