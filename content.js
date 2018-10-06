@@ -1,35 +1,5 @@
-console.log("Table open, now loading hotkeys...");
+console.log("Table open, now tiling tables");
 
-//Hotkeys for betting, raising, folding, and selecting bet-input box
-//.future-actions are preselect options. 
-//.action-buttons are buttons to fold, call, check, bet, and raise when action is on you.
-//.show happens when it is users turn. without .show bugs will occur such as folding at any time.
-//keycodes: 81 is 'Q', 68 is 'D', 69 is 'E', 38 is 'Arrow Up'
-document.onkeydown = function(e) {
-    if (e.which == 81) {
-        const futureFoldBtn = document.querySelector('.future-actions.fold')
-        const foldBtn = document.querySelector('.action-button.action-fold.show')
-            if (futureFoldBtn) futureFoldBtn.click();
-            else if (foldBtn) foldBtn.click();
-    } else if (e.which == 68) {
-        const betBtn = document.querySelector('.action-button.action-bet.show')
-        const raiseBtn = document.querySelector('.action-button.action-raise.show')
-            if (betBtn) betBtn.click();
-            else if (raiseBtn) raiseBtn.click();
-    } else if (e.which == 69) {
-        const callBtn = document.querySelector('.action-button.action-call.show')
-        const checkBtn = document.querySelector('.action-button.action-check.show')
-            if (callBtn) callBtn.click();
-            else if (checkBtn) checkBtn.click();
-    } else if (e.which == 38) {
-        const betInput = document.querySelector('.bet-input')
-            if (betInput) betInput.click();
-    }
-};
-
-console.log("Hotkeys loaded. Now loading quick-seat tool...");
-
-//create delay function, guess setTimeout by itself would work as well
 var delay = ( function() {
     var timer = 0;
     return function(callback, ms) {
@@ -38,12 +8,32 @@ var delay = ( function() {
     };
 })();
 
-//on table open: tile all tables on screen and immediately join game. 
-//600ms delay so table has time to load before executing.
+document.onkeydown = function(e) {
+    if (e.which == 81) {
+        const foldBtn1 = document.querySelector('.future-actions.fold')
+        const foldBtn = document.querySelector('.action-button.action-fold.show')
+            if (foldBtn1) foldBtn1.click();
+            else if (foldBtn) foldBtn.click();
+    } else if (e.which == 68) {
+        const test1 = document.querySelector('.action-button.action-bet.show')
+        const test2 = document.querySelector('.action-button.action-raise.show')
+            if (test1) test1.click();
+            else if (test2) test2.click();
+    } else if (e.which == 69) {
+        const test3 = document.querySelector('.action-button.action-call.show')
+        const test4 = document.querySelector('.action-button.action-check.show')
+            if (test3) test3.click();
+            else if (test4) test4.click();
+    } else if (e.which == 38) {
+        const test5 = document.querySelector('.bet-input')
+            if (test5) test5.focus().select();
+    }
+};
+
 delay(function(){
     document.querySelector('.tile-tables').click();
-    const joinBtn = document.querySelector('.action-join')
-        if (joinBtn) joinBtn.click();
-}, 600 );
+    const span1 = document.querySelector('.action-join')
+        if (span1) span1.click();
+}, 700 ); // end delay
 
-console.log("This is the end. My only friend - the end.");
+console.log("made it here");
