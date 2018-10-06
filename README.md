@@ -5,12 +5,13 @@ Google Chrome extension content script for buying into tables quickly, automatin
 
 Future features..
 
--Table and card mods                                                                                                                  
--Pre-select fold buttons                                                                                                                   
+-Table, card, and avatar mods                                                                                                            
+-Pre-select fold buttons                                                                                                                  
 -Mouse over table focus                                                                                                                   
-  -highlight text under current table option                                                                                               
+  -highlight text under mouse of current table                                                                                             
 -Auto-rebuy under X bb                                                                                                                     
 -No more blinds hotkey                                                                                                                     
   -sit out next hand                                                                                                                       
 -Winnings/Losses Graph display inside Hand History tab                                                                                     
 -Save last hand link in extension for later review hotkey                                                                                 
+-Hotkey for summing table balances across all tables and bank and displaying in Alert window                                               
