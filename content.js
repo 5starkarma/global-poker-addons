@@ -47,7 +47,7 @@ delay(function(){
 
 console.log("Adding mouseover active table styling..");
 
-//Add red color to bets when mouse is over table
+//Add white color to bets when mouse is over table. Grey when mouse leaves table.
 document.querySelector('.view-container').addEventListener("mouseover", mouseOver);
 document.querySelector('.view-container').addEventListener("mouseout", mouseOut);
 
