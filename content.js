@@ -34,6 +34,16 @@ delay(function(){
     document.querySelector('.tile-tables').click();
     const span1 = document.querySelector('.action-join')
         if (span1) span1.click();
-}, 700 ); // end delay
+}, 900 ); // end delay
 
 console.log("made it here");
+
+//Add red color to bets when mouse is over table
+document.querySelector('.view-container').addEventListener("mouseover", mouseOver);
+function mouseOver() {
+    document.querySelector('.view-container').style.color = "white";
+}
+document.querySelector('.view-container').addEventListener("mouseout", mouseOut);
+function mouseOut() {
+    document.querySelector('.view-container').style.color = "grey";
+}
