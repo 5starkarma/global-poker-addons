@@ -1,5 +1,6 @@
 console.log("Table open. Activating hotkeys..");
 
+//create delay function, guess setTimeout by itself would work as well
 var delay = ( function() {
     var timer = 0;
     return function(callback, ms) {
@@ -7,7 +8,11 @@ var delay = ( function() {
         timer = setTimeout(callback, ms);
     };
 })();
-//set hotkeys. 81 is 'Q'. 68 is '
+//Hotkeys for betting, raising, folding, and selecting bet-input box
+//.future-actions are preselect options.
+//.action-buttons are buttons to fold, call, check, bet, and raise when action is on you.
+//.show happens when it is users turn. without .show bugs will occur such as folding at any time.
+//keycodes: 81 is 'Q', 68 is 'D', 69 is 'E', 38 is 'Arrow Up'
 document.onkeydown = function(e) {
     if (e.which == 81) {
         const futureFoldBtn = document.querySelector('.future-actions.fold')
@@ -31,7 +36,9 @@ document.onkeydown = function(e) {
 };
 
 console.log("Hotkeys activated. Tiling and joining table...");
-//tile tables and join newly opened table
+
+//on table open: tile all tables on screen and immediately join game.
+//600ms delay so table has time to load before executing.
 delay(function(){
     document.querySelector('.tile-tables').click();
     const joinBtn = document.querySelector('.action-join')
