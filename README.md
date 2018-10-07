@@ -8,7 +8,7 @@ Future features..
 -Table, card, and avatar mods                                                                                                            
 -Pre-select fold buttons                                                                                                                  
 -Mouse over table focus                                                                                                                   
-  -highlight text under mouse of current table                                                                                             
+  -highlight text under mouse of current table***                                                                                         
 -Auto-rebuy under X bb                                                                                                                     
 -No more blinds hotkey                                                                                                                     
   -sit out next hand                                                                                                                       
@@ -16,3 +16,5 @@ Future features..
 -Save last hand link in extension for later review hotkey                                                                                 
 -Hotkey for summing table balances across all tables and bank and displaying in Alert window                                              
 -Toggle extension on/off                                                                                                                   
+
+***denotes complete
