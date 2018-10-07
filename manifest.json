@@ -10,7 +10,7 @@
   },
   "content_scripts": [{
       "matches": ["https://public.globalpoker.com/poker-client/poker/10/external-table"],
-      "run_at": "document_end",
+      "run_at": "document_idle",
       "js": ["content.js"]
     }]
 }

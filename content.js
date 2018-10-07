@@ -1,13 +1,10 @@
 console.log("Table open. Activating hotkeys..");
 
-//create delay function, guess setTimeout by itself would work as well
-var delay = ( function() {
-    var timer = 0;
-    return function(callback, ms) {
-        clearTimeout (timer);
-        timer = setTimeout(callback, ms);
-    };
-})();
+//sleep function
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+
 //Hotkeys for betting, raising, folding, and selecting bet-input box
 //.future-actions are preselect options.
 //.action-buttons are buttons to fold, call, check, bet, and raise when action is on you.
@@ -32,18 +29,32 @@ document.onkeydown = function(e) {
     } else if (e.which == 38) {
         const betInputBox = document.querySelector('.bet-input')
             if (betInputBox) betInputBox.click();
+    } else if (e.which == 32) {
+        sleep(500).then(() => {
+            const shareHand = document.querySelector('.share-hand')
+                if (shareHand) shareHand.click();
+                });
+                sleep(1000).then(() => {
+                    const openURL = document.querySelector('.open-url-icon')
+                        if (openURL) openURL.click();
+                        });
     }
 };
 
 console.log("Hotkeys activated. Tiling and joining table...");
 
 //on table open: tile all tables on screen and immediately join game.
-//600ms delay so table has time to load before executing.
-delay(function(){
+//500ms delay so elements have time to load before executing.
+sleep(500).then(() => {
     document.querySelector('.tile-tables').click();
+    document.querySelector('.gameplay-tab').click();
     const joinBtn = document.querySelector('.action-join')
         if (joinBtn) joinBtn.click();
-}, 900 ); // end delay
+        sleep(1500).then(() => {
+            const buyinBtn = document.querySelector('.new-ui-dialog-ok-button')
+                if (buyinBtn) buyinBtn.click();
+                });
+});
 
 console.log("Adding mouseover active table styling..");
 
