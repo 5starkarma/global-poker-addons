@@ -1,4 +1,4 @@
-console.log("Table open, now tiling tables");
+console.log("Table open. Activating hotkeys..");
 
 var delay = ( function() {
     var timer = 0;
@@ -30,13 +30,15 @@ document.onkeydown = function(e) {
     }
 };
 
+console.log("Hotkeys activated. Tiling and joining table...");
+
 delay(function(){
     document.querySelector('.tile-tables').click();
     const span1 = document.querySelector('.action-join')
         if (span1) span1.click();
 }, 900 ); // end delay
 
-console.log("made it here");
+console.log("Adding mouseover active table styling..");
 
 //Add red color to bets when mouse is over table
 document.querySelector('.view-container').addEventListener("mouseover", mouseOver);
@@ -47,3 +49,5 @@ document.querySelector('.view-container').addEventListener("mouseout", mouseOut)
 function mouseOut() {
     document.querySelector('.view-container').style.color = "grey";
 }
+
+console.log("This is the end. My only friend - the end.");
