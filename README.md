@@ -9,7 +9,7 @@ Future features..
 -Pre-select fold buttons                                                                                                                  
 -Mouse over table focus                                                                                                                   
   -highlight text under mouse of current table***                                                                                         
--Add on/off toggle for active table text styling
+-Add on/off toggle for active table text styling                                                                                           
 -Auto-rebuy under X bb                                                                                                                     
 -No more blinds hotkey                                                                                                                     
   -sit out next hand                                                                                                                       
