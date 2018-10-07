@@ -14,7 +14,7 @@ Future features..
 -No more blinds hotkey                                                                                                                     
   -sit out next hand                                                                                                                       
 -Winnings/Losses Graph display inside Hand History tab                                                                                     
--Save last hand link in extension for later review hotkey                                                                                 
+-Save last hand link in extension for later review hotkey***                                                                               
 -Hotkey for summing table balances across all tables and bank and displaying in Alert window                                              
 -Toggle extension on/off                                                                                                                   
 
